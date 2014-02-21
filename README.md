@@ -21,7 +21,7 @@ go to the command prompt and type something like this:
 
 Some of the things I am still going to change include:
 
-* add other websites so that you can get pictures not only from tumblr, but let's say, also from [mmm-tasty.ru](mmm-tasty.ru).
+* add other websites so that you can get pictures not only from tumblr, but let's say, also from [http://mmm-tasty.ru](mmm-tasty.ru).
 If only I were a regexp pro it would be already done :)
 * use [trollop](http://trollop.rubyforge.org) instead of parsing arguments manually (for such a simple script maybe there's no need, just wanna play with it a bit)
 * save text if necessary *(still thinking if I will ever need it)*
