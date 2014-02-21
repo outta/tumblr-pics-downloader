@@ -5,10 +5,10 @@ It will download all the jpg, jpeg, png, gif files to your destination folder.
 It's very fast because of parallelization.
 
 The downloader is based on the [David Shaw's Tumblr_scrape](https://github.com/davidshaw/Tumblr-Scrape).
-Check his code out and compare to mine to see where the differences are.
+Check his code out and compare to mine to see what the changes are.
 
 Differences from the original version:
-* the main difference: speed. I didn't measure the difference, but using 10 threads makes it approximately 8 times faster. Further increasing of threads didn't bring anything, but you can test it yourself.
+* **speed**. I didn't measure it, but using 10 threads makes it approximately 8 times faster. Further increasing of threads didn't bring anything, but you can test it yourself.
 * number of supported picture formats is also extended from |jpg and png| to |jpg, jpeg, png and gif|. 
 One can add more formats easily by changing regexp in 2 places.
 * code refactored a bit (if it became better or not is for you to judge)
