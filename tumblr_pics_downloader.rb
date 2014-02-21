@@ -47,10 +47,7 @@ threadsNr = 10
 url = 'onlyfog.mmm-tasty.ru'
 
 if url.include? 'tumblr.com'
-  regex = /http:\/\/(\d|[a-zA-Z])*.media.tumblr.com\/(.*).(jpg|png|gif)/
-elsif url.include? 'mmm-tasty.ru'
-  # regex = /(https:(?:\/*[a-zA-Z]*\.*-*\d*)*(?:\.gif|\.jpg|\.bmp|\.png|\.jpeg))/
-  regex = /http:\/\/pp.vk.me\/(.*).(jpg|png|gif|jpeg)/
+  regex = /http:\/\/(\d|[a-zA-Z])*.media.tumblr.com\/(.*).(jpg|jpeg|png|gif)/
 end
 
 partOfUrl = url.sub(/^http:\/\//, '')
@@ -84,7 +81,7 @@ while not done do
 
   arr.each.in_parallel_n(threadsNr) do |pic|
     begin
-      f = File.new("#{basedir}#{Digest::MD5.hexdigest(pic)}.#{pic.scan(/(jpg|png|gif)/)[0][0]}", "wb")
+      f = File.new("#{basedir}#{Digest::MD5.hexdigest(pic)}.#{pic.scan(/(jpg|jpeg|png|gif)/)[0][0]}", "wb")
       f.write(open(pic).read)
       f.close
       puts "[+] wrote pic #{count}"
